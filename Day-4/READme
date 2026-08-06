@@ -1,0 +1,100 @@
+# Gaussian Blur
+
+## 🎯 Objective
+
+- Learn how to reduce image noise using Gaussian Blur.
+- Understand the effect of different kernel sizes on image smoothing.
+- Improve image quality before applying further image processing techniques.
+
+## 🔄 Flow
+
+Input Image
+      │
+      ▼
+Read Image
+      │
+      ▼
+Apply Gaussian Blur
+      │
+      ▼
+Display Blurred Image
+      │
+      ▼
+Save Output Image
+
+
+# Binary Thresholding
+
+## 🎯 Objective
+
+- Learn how to convert an image into a binary (black and white) image.
+- Understand the concept of threshold values.
+- Prepare images for segmentation and object detection.
+
+## 🔄 Flow
+
+Input Image
+      │
+      ▼
+Read Image
+      │
+      ▼
+Convert to Grayscale
+      │
+      ▼
+Apply Binary Threshold
+      │
+      ▼
+Display Threshold Image
+      │
+      ▼
+Save Output Image
+
+
+# Motion Detection using OpenCV
+
+## 🎯 Objective
+
+- Learn how to capture live video from a webcam.
+- Detect moving objects using frame differencing.
+- Identify object boundaries using contour detection.
+- Draw bounding boxes around detected moving objects.
+- Display the motion detection status in real time.
+
+## 🔄 Flow
+
+Start Webcam
+      │
+      ▼
+Capture Video Frame
+      │
+      ▼
+Convert to Grayscale
+      │
+      ▼
+Apply Gaussian Blur
+      │
+      ▼
+Compare with First Frame
+      │
+      ▼
+Apply Threshold
+      │
+      ▼
+Dilate Image
+      │
+      ▼
+Find Contours
+      │
+      ▼
+Is Contour Area > Threshold?
+      │
+   Yes │ No
+      ▼
+Draw Bounding Box
+      │
+      ▼
+Display "Moving Object Detected"
+      │
+      ▼
+Show Video Feed
