@@ -1,100 +1,142 @@
-# Gaussian Blur
+
+---
+
+# 🌫️ Gaussian Blur
 
 ## 🎯 Objective
 
-- Learn how to reduce image noise using Gaussian Blur.
-- Understand the effect of different kernel sizes on image smoothing.
-- Improve image quality before applying further image processing techniques.
+Gaussian Blur is used to **reduce image noise** and **smooth images** by applying a Gaussian filter. It is commonly used before edge detection, thresholding, and object detection to improve processing accuracy.
 
-## 🔄 Flow
+### ✨ Key Learning Outcomes
 
-Input Image
+- ✅ Learn image smoothing using Gaussian Blur.
+- ✅ Understand the effect of different kernel sizes.
+- ✅ Reduce unwanted image noise.
+- ✅ Prepare images for further image processing.
+
+### 🔄 Workflow
+
+```text
+📷 Input Image
       │
       ▼
-Read Image
+📂 Read Image
       │
       ▼
-Apply Gaussian Blur
+🌫️ Apply Gaussian Blur
       │
       ▼
-Display Blurred Image
+🖥️ Display Blurred Image
       │
       ▼
-Save Output Image
+💾 Save Output Image
+```
 
+### 🛠️ Function Used
 
-# Binary Thresholding
+```python
+cv2.GaussianBlur(src, (kernel_width, kernel_height), sigmaX)
+```
 
-## 🎯 Objective
+---
 
-- Learn how to convert an image into a binary (black and white) image.
-- Understand the concept of threshold values.
-- Prepare images for segmentation and object detection.
-
-## 🔄 Flow
-
-Input Image
-      │
-      ▼
-Read Image
-      │
-      ▼
-Convert to Grayscale
-      │
-      ▼
-Apply Binary Threshold
-      │
-      ▼
-Display Threshold Image
-      │
-      ▼
-Save Output Image
-
-
-# Motion Detection using OpenCV
+# ⚫ Binary Thresholding
 
 ## 🎯 Objective
 
-- Learn how to capture live video from a webcam.
-- Detect moving objects using frame differencing.
-- Identify object boundaries using contour detection.
-- Draw bounding boxes around detected moving objects.
-- Display the motion detection status in real time.
+Binary Thresholding converts a grayscale image into a **black-and-white image** by comparing each pixel against a threshold value. It is widely used in image segmentation and object detection.
 
-## 🔄 Flow
+### ✨ Key Learning Outcomes
 
-Start Webcam
+- ✅ Learn Binary Thresholding.
+- ✅ Understand threshold values.
+- ✅ Convert grayscale images into binary images.
+- ✅ Prepare images for contour detection.
+
+### 🔄 Workflow
+
+```text
+📷 Input Image
       │
       ▼
-Capture Video Frame
+📂 Read Image
       │
       ▼
-Convert to Grayscale
+⚫ Convert to Grayscale
       │
       ▼
-Apply Gaussian Blur
+⚪ Apply Binary Threshold
       │
       ▼
-Compare with First Frame
+🖥️ Display Threshold Image
       │
       ▼
-Apply Threshold
+💾 Save Output Image
+```
+
+### 🛠️ Function Used
+
+```python
+cv2.threshold(src, threshold_value, max_value, cv2.THRESH_BINARY)
+```
+
+---
+
+# 🎥 Motion Detection using OpenCV
+
+## 🎯 Objective
+
+This project detects **moving objects** from a live webcam feed by comparing the current frame with a reference frame. It uses Gaussian Blur, Binary Thresholding, Dilation, and Contour Detection to identify and highlight moving objects.
+
+### ✨ Key Learning Outcomes
+
+- ✅ Capture live video using a webcam.
+- ✅ Convert frames to grayscale.
+- ✅ Apply Gaussian Blur to reduce noise.
+- ✅ Detect frame differences using `absdiff()`.
+- ✅ Apply Binary Thresholding.
+- ✅ Use Dilation to remove gaps.
+- ✅ Detect contours of moving objects.
+- ✅ Draw bounding rectangles around detected objects.
+- ✅ Display real-time motion detection status.
+
+### 🔄 Workflow
+
+```text
+🎥 Start Webcam
       │
       ▼
-Dilate Image
+📸 Capture Video Frame
       │
       ▼
-Find Contours
+⚫ Convert to Grayscale
       │
       ▼
-Is Contour Area > Threshold?
-      │
-   Yes │ No
-      ▼
-Draw Bounding Box
+🌫️ Apply Gaussian Blur
       │
       ▼
-Display "Moving Object Detected"
+🔍 Compare with First Frame (absdiff)
       │
       ▼
-Show Video Feed
+⚪ Apply Binary Threshold
+      │
+      ▼
+🧱 Dilate Image
+      │
+      ▼
+📐 Find Contours
+      │
+      ▼
+📏 Check Contour Area
+      │
+      ▼
+🟢 Draw Bounding Rectangle
+      │
+      ▼
+📝 Display Motion Detection Status
+      │
+      ▼
+🖥️ Show Live Video Feed
+```
+
+
