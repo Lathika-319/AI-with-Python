@@ -13,37 +13,39 @@
 
 ## 🔄 Workflow
 
+```text
 🎥 Camera
-      │
-      ▼
+   │
+   ▼
 📸 Capture Frame
-      │
-      ▼
+   │
+   ▼
 🌫️ Gaussian Blur
-      │
-      ▼
+   │
+   ▼
 🎨 Convert BGR → HSV
-      │
-      ▼
+   │
+   ▼
 🎯 Select Required Color
-      │
-      ▼
+   │
+   ▼
 ⚪ Create Color Mask
-      │
-      ▼
+   │
+   ▼
 🧹 Erosion + Dilation
-      │
-      ▼
+   │
+   ▼
 🔍 Find Contours
-      │
-      ▼
+   │
+   ▼
 ⭕ Find Center & Radius
-      │
-      ▼
+   │
+   ▼
 📍 Check Object Position
-      │
-      ▼
+   │
+   ▼
 ⬅️ Left / ➡️ Right / ⬆️ Front / 🛑 Stop
-      │
-      ▼
+   │
+   ▼
 🖥️ Display Output
+```
